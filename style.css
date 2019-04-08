@@ -1,0 +1,28 @@
+.hand{
+	transform-origin: bottom left;
+	animation: waving 0.5s linear infinite ;
+}
+
+
+@keyframes waving {
+	0% { transform: rotate(0deg); }
+	50%	{ 
+		transform: rotate(1deg); 
+		/*transform: translate(-2px);*/
+	}
+	100% { transform: rotate(0deg); }
+}
+
+.head{
+	transform-origin: bottom;
+	animation: headMoving 0.5s linear infinite;
+}
+
+@keyframes headMoving{
+	25%{
+		transform: translate(1px);
+	}
+	75%{
+		transform: translate(-1px);
+	}
+}
