@@ -5,36 +5,85 @@
 	padding: 0;
 }
 
-.mainScreen{
-	width: 90%;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: auto minmax(300px, 50%);
-
-}
 h1{
 	font-family: 'Poppins', sans-serif;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 56px;
+	font-size: 3 em;
 }
 
-.subTitle{
+a{
+	text-decoration: none;
+}
+
+.mainScreen{
+	width: 90%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 3fr 4fr 2fr;
+	height: 100vh;
+	align-items: center;
+	font-size: 14px;
+}
+.intro{
 	
 	font-family: Poppins;
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 40px;
-
+	padding: 10px;
 	color: #142137;
-}
 
-.wavingMan{
-	grid-column: 2/3;
-	width: minmax(400px,45%);
+	grid-row: 1/2;
 }
 
 
+.links{
+	grid-row:3/4;
+	padding: 10px;
+}
+	
+
+	
+.links a {
+	display: inline-block;
+	border-bottom: 4px solid #142137;
+	font-size: 1.25em;
+	font-family: Poppins;
+	font-weight: 700;
+	line-height: 1.25 em;
+	margin:0px 20px 10px 0px;
+	color: #142137;
+	position: relative;
+}
+
+.links a:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #EB5757;
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* this is to match where the border is */
+  visibility: hidden;
+  transform-origin: left; 
+  transform: scale(0);
+  transition: 0.25s linear;
+}
+
+.links a:hover{
+	color:#EB5757;
+}
+.links a:hover:before{
+  visibility: visible;
+  transform: scale(1);
+}
+
+.illustration{
+	grid-row: 2/3;
+}
+
+
+
+/*illustration Css ANimations*/
 
 .hand{
 	transform-origin: bottom left;
